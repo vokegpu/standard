@@ -13,7 +13,7 @@ Features: object(s), data(s) or any technology from Vokegpu.
 * Use 2 (two) spaces as tab.
 * Standard case is sneak_case, SCREAM_SNEAK_CASE for macro(s).
 * No unnecessary macro(s), use `constexpr`, for type-definitions use `typedef`.
-* Ptr(s) must starts with `p_*`.
+* Ptr(s) must starts with `p_*`, and counts many `***`, e.g: `int ***ppp_bla`.
 * Use `this->` and not `m_*`.
 * Definitions on header(s) are trivial but do not use too much.
 * C-style references are allowed `int *p_bla` but if possible use `int &bla`.
