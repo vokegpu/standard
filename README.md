@@ -1,7 +1,7 @@
 # Code of Conduct and Coding Style Guide for Vokegpu Projects
 
 All written here is strictly followed, may some older projects contains unaltered coding style but EKG must refactor soon.  
-For libraries, you must follow the user-programmer side concept, if the project is an applcation, follow as the core of library.
+For libraries, you must follow the user-programmer side concept, if the project is an application, follow as the core of library.
 
 # Summary
 
