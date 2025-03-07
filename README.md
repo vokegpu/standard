@@ -10,11 +10,15 @@ Features: object(s), data(s) or any technology from Vokegpu.
 
 # Library Coding Guide-Style
 
+* Use 2 (two) spaces as tab.
 * Standard case is sneak_case, SCREAM_SNEAK_CASE for macro(s).
-* No macro(s), use `constexpr` or `typedef`.
-* Ptr(s) must be starts with `p_*`.
+* No unnecessary macro(s), use `constexpr`, for type-definitions use `typedef`.
+* Ptr(s) must starts with `p_*`.
 * Use `this->` and not `m_*`.
 * Definitions on header(s) are trivial but do not use too much.
+* C-style references are allowed `int *p_bla` but if possible use `int &bla`.
+* Struct(s) are not allowed to have method(s), if contains, must be declared as `class` and not `struct`.
+* Non-OO (Object Oriented) or struct without method(s) must end as type `*_t`.
 
 * - Internal-object(s) and internal-data(s) must be by-package namespace separated.
 ```c++
@@ -32,46 +36,20 @@ namespace lib::gpu {
 }
 ```
 
-* 2- Public user-programmer side object(s) and data(s), must not be by-package namespace separated.
+* - Public user-programmer side object(s) and data(s), must not be by-package namespace separated.
 ```c++
 // gpu/model.hpp
-namespace lib::gpu {
-  
-}
-```
- 
-* 3- Non-OO (Object Oriented) or struct without method(s) must end as type `*_t`.
-* 4- Struct(s) are not allowed to have method(s), if contains, must be declared as `class` and not `struct`.
-* 5- 
-
-```
-* All user-programmer side features, must be no longer by-package namespace separated.  
-
-* 2- Only internal-objects and internal-features must be by-package namespace separated.
-```c++
-// ekg/ui/frame
-namespace ekg {
-  struct frame_t {
+namespace lib {
+  struct model_t {
   public:
-    // descriptor fields
-  }
+    // bla
+  };
 }
 
-namespace ekg::ui {
-  struct frame : public ekg::ui::abstract {
-  public:
-    // frame widget fields
-  }
-}
-```
+namespace lib {
+   lib::flags_t create_model(lib::model_t &model);
 
-* 3- Non-OO features as descriptors, must end as a type `*_t`, and not a class.
-
-* 4- OO features must be a class.
-
-* 5- `typedef` must end as a type `*_t`.
-
-* 6- `extern` fields must be public `ekg::` namespace and not private `ekg::*private*::` namespace(s).
-
-* 7- Any service or specialized-manager must contains `init` and `quit` methods, same it is useless at moment.
+   // or C++ way
+   lib::flags_t create_model(lib::model_t *p_model);
+};
 ```
