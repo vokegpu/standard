@@ -1,6 +1,7 @@
 # Code of Conduct and Coding Style Guide for Vokegpu Projects
 
-All written here is strictly followed, may some older projects contains unaltered coding style but EKG must refactor soon.
+All written here is strictly followed, may some older projects contains unaltered coding style but EKG must refactor soon.  
+For libraries, you must follow the user-programmer side concept, if the project is an applcation, follow as the core of library.
 
 # Summary
 
@@ -22,6 +23,8 @@ Features: object(s), data(s) or any technology from Vokegpu.
 
 * - Internal-object(s) and internal-data(s) must be by-package namespace separated.
 ```c++
+// all `lib::gpu` are used by the core of library
+
 // gpu/model.hpp
 namespace lib::gpu {
   struct instance_t {
@@ -30,7 +33,7 @@ namespace lib::gpu {
   };
 
   lib::flags_t create_instance(
-    lib::create_instance_info_t *p_create_instance_info,
+    lib::gpu::create_instance_info_t *p_create_instance_info,
     lib::gpu::instance_t *p_instance
   );
 }
@@ -38,6 +41,8 @@ namespace lib::gpu {
 
 * - Public user-programmer side object(s) and data(s), must not be by-package namespace separated.
 ```c++
+// all `lib` are used by the core of library at same time is public for the user-programmer side.
+
 // gpu/model.hpp
 namespace lib {
   struct model_t {
