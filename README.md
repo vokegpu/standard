@@ -11,9 +11,31 @@ Features: object(s), data(s) or any technology from Vokegpu.
 
 # Library Coding Guide-Style
 
+* Use `#ifndef LIB_PACKAGE_FEATURE_HPP` for headers, for platform-specific code use `#if defined(X)`
+```c++
+#ifndef LIB_PACKAGE_FEATURE_HPP
+#define LIB_PACKAGE_FEATURE_HPP
+
+namespace lib {
+  void meow() {
+    #if defined(X)
+      // do something here
+    #else
+      // moo
+    #endif
+
+    #if defined(Y)
+      meow();
+    #endif
+  }
+}
+
+#endif
+```
+
 * Use 2 (two) spaces as tab.
 * Standard case is sneak_case, SCREAM_SNEAK_CASE for macro(s).
-* No unnecessary macro(s), use `constexpr`, for type-definitions use `typedef`.
+* No unnecessary macro(s), use `constexpr` if possible, for type-definitions use `typedef`.
 * Ptr(s) must starts with `p_*`, and counts many `***`, e.g: `int ***ppp_bla`.
 * Use `this->` and not `m_*`.
 * Definitions on header(s) are trivial but do not use too much.
