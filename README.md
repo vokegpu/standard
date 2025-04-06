@@ -7,7 +7,7 @@ For libraries, you must follow the user-programmer side concept, if the project 
 
 ---
 
-## Summary, Commit-Format, and Library Coding Guide-Style
+## Summary, Commit-Format, Version, and Library Coding Guide-Style
 
 ### Summary
 
@@ -36,6 +36,26 @@ Commit-types:
 * `[git]` any related git stuff
 * `[deprecated]` specific-case where you deprecated anything
 * `[build]` build-file was changed
+
+### Version
+
+Any software from VokeGpu MUST has a paper named `commit.txt` under `version` dir, where you can describe what was created, updated or deleted.
+```
+[version e.g: 1.0.0] [date e.g: 04/06/2025]
+
+-- [description: removed moo]
+-- [description: something glitch idk]
+
+[version e.g: 1.1.0] [date e.g: 10/07/2025]
+
+-- [description e.g: bla added meow]
+
+etc
+
+```
+
+Most recent version must be always the end.  
+With this auto-releases are possible with complete description and version history-log.
 
 ### Library Coding Guide-Style
 
