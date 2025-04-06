@@ -1,15 +1,43 @@
 # Code of Conduct and Coding Style Guide for Vokegpu Projects
 
+## Preface
+
 All written here is strictly followed, may some older projects contains unaltered coding style but EKG must refactor soon.  
 For libraries, you must follow the user-programmer side concept, if the project is an application, follow as the core of library.
 
-# Summary
+---
+
+## Summary, Commit-Format, and Library Coding Guide-Style
+
+### Summary
 
 User-programmer: an user that is a programmer and is using a technology from Vokegpu.  
 Internal: no user-programmer side purpose, only for the library engine.  
 Features: object(s), data(s) or any technology from Vokegpu.
 
-# Library Coding Guide-Style
+### Commit-Format
+
+Commit formatting is important, sadly VokeGpu is not total mature, but we should follow it now.
+
+Basic:  
+`[commit-type] thing 1; thing 2; thing ...`
+
+If possible add a description for specific-topics:  
+`bla, bla, meow`
+
+Also, concant commits-types:  
+`[feature][update][fix] added colored-buttons; updated slider code; fixed a glitch where meow spells on the console`
+
+Commit-types:  
+* `[update]` updated any-feature
+* `[feature]` added a feature
+* `[fix]` fixed something like a glitch or performance-issues
+* `[ref]` refactored code, like code-format, nomenclature or any moved stuff
+* `[git]` any related git stuff
+* `[deprecated]` specific-case where you deprecated anything
+* `[build]` build-file was changed
+
+### Library Coding Guide-Style
 
 * Use `#ifndef LIB_PACKAGE_FEATURE_HPP` for headers, for platform-specific code use `#if defined(X)`
 ```c++
