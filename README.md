@@ -54,8 +54,8 @@ etc
 
 ```
 
-Most recent version must be always the end.  
-With this auto-releases are possible with complete description and version history-log.
+Most recent version must be always at end.  
+With this auto-releases are possible with complete description and history.
 
 ### Library Coding Guide-Style
 
