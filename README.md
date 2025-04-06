@@ -25,7 +25,7 @@ Basic:
 If possible add a description for specific-topics:  
 `bla, bla, meow`
 
-Also, concant commits-types:  
+Also, concant commits-types if possible:  
 `[feature][update][fix] added colored-buttons; updated slider code; fixed a glitch where meow spells on the console`
 
 Commit-types:  
