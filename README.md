@@ -11,9 +11,9 @@ For libraries, you must follow the user-programmer side concept, if the project 
 
 ### Summary
 
-User-programmer: an user that is a programmer and is using a technology from Vokegpu.  
-Internal: no user-programmer side purpose, only for the library engine.  
-Features: object(s), data(s) or any technology from Vokegpu.
+`User-programmer` - an user that is a programmer and is using a technology from Vokegpu.  
+`Internal` - no user-programmer side purpose, only for the library engine.  
+`Features` - object(s), data(s) or any technology from Vokegpu.
 
 ### Commit-Format
 
