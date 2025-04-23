@@ -2,8 +2,7 @@
 
 ## Preface
 
-All written here is strictly followed, may some older projects contains unaltered coding style but EKG must refactor soon.  
-For libraries, you must follow the user-programmer side concept, if the project is an application, follow as the core of library.
+All written here is strictly followed, may some older projects contains unaltered coding style but EKG must refactor soon.
 
 ---
 
@@ -82,7 +81,7 @@ namespace lib {
 ```
 
 * Use 2 (two) spaces as tab.
-* Standard case is sneak_case, SCREAM_SNEAK_CASE for macro(s).
+* Standard case is sneak_case, SCREAM_SNEAK_CASE for macro(s), optioanlly (SCREAM_SNEAK_CASE, sneak_case, nocase, SCREAMNOCASE) for enums.
 * No unnecessary macro(s), use `constexpr` if possible, for type-definitions use `typedef`.
 * Ptr(s) must starts with `p_*`, and counts many `***`, e.g: `int ***ppp_bla`.
 * Use `this->` and not `m_*`.
@@ -127,4 +126,30 @@ namespace lib {
    // or C++ way
    lib::flags_t create_model(lib::model_t *p_model);
 };
+```
+
+### Software Coding Guide-Style
+
+All must follow as core-library, except:
+
+* Use `typedef` using namespace `applicationk::*`, as example:
+```cpp
+namespace app {
+  typedef uint64_t flags_t;
+}
+```
+
+* Enums and global functions can be implemented using namespace `application::*`, as example:
+```cpp
+namespace app {
+  enum do {
+    MEOW,
+    MOO
+  }; 
+
+  template<typename t>
+  t meow() {
+    return t {};
+  }
+}
 ```
