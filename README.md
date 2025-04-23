@@ -81,7 +81,7 @@ namespace lib {
 ```
 
 * Use 2 (two) spaces as tab.
-* Standard case is `sneak_case`, `SCREAM_SNEAK_CASE` for macro(s), optionally (`SCREAM_SNEAK_CASE`, `sneak_case`, `nocase`, `SCREAMNOCASE`) for enum(s).
+* Standard case is `sneak_case`, `SCREAM_SNEAK_CASE` for macro(s), optionally (`SCREAM_SNEAK_CASE`, `sneak_case`, `nocase`, `SCREAMNOCASE`) for enum(s) --- but no mistakes, do not use `SCREAMNOCASE` enum(s) with `nocase`, we do not care if you use `nocase` and `sneak_case` for enum(s), just if you mix `SCREAM_SNEAK_CASE` with `sneak_case`.
 * No unnecessary macro(s), use `constexpr` if possible, for type-definitions use `typedef`.
 * Ptr(s) must starts with `p_*`, and counts many `***`, e.g: `int ***ppp_bla`.
 * Use `this->` and not `m_*`.
