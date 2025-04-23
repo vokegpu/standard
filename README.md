@@ -89,6 +89,7 @@ namespace lib {
 * C-style references are allowed `int *p_bla` but if possible use `int &bla`.
 * Struct(s) are not allowed to have method(s), if contains, must be declared as `class` and not `struct`.
 * Non-OO (Object Oriented) or struct without method(s) must end as type `*_t`.
+* Library output dir must be located in: `lib/OS/32|64`.
 
 * - Internal-object(s) and internal-data(s) must be by-package namespace separated.
 ```c++
@@ -131,6 +132,8 @@ namespace lib {
 ### Software Coding Guide-Style
 
 All must follow as core-library, except:
+
+* Executable output dir must be located in: `bin/OS/32|64`.
 
 * Use `typedef` using namespace `application::*`, as example:
 ```cpp
