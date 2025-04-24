@@ -91,7 +91,7 @@ namespace lib {
 * Non-OO (Object Oriented) or struct without method(s) must end as type `*_t`.
 * Library output dir must be located in: `lib/OS/32|64`.
 
-* - Internal-object(s) and internal-data(s) must be by-package namespace separated.
+* - Internal-object(s) and internal-data(s) must be by-package namespace separated, you can optionally complete the package namespace sentence, but do not mix, follow a pattern.
 ```c++
 // all `lib::gpu` are used by the core of library
 
