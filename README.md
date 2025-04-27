@@ -71,7 +71,7 @@ Building a project with support for 32 bits must use at maxium 4-bytes number, a
 namespace * {
   typedef uint32_t flags_t;
   typedef uint32_t id_t;
-};
+}
 ```
 
 If the project purpose is not support 32-bits, reaching 8-bytes is not a rule, this applies for all parts of code, every field, function, method etc.
@@ -166,7 +166,7 @@ namespace application::* {
 }
 
 // general features(s)
-namesplace application {
+namespace application {
   typedef uint64_t flags_t;
 
   enum make {
