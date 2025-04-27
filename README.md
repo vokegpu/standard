@@ -62,11 +62,11 @@ With auto-release, we can describe a complete history-change and details.
 
 ---
 
-## The Programming Standard for Building VokeGpu Technologies 
+## The Programming-Standard
 
 ### Architecture 
 
-Building a project with support for 32 bits must use at maxium 4-bytes number, as example, declaring `flags_t` or `id`:
+Building a project with support for 32 bits must use at maxium 4-bytes number, as example, declaring flags or id:
 ```cpp
 namespace * {
   typedef uint32_t flags_t;
