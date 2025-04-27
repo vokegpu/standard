@@ -1,5 +1,7 @@
 # Code of Conduct and Coding Style Guide for Vokegpu Projects
 
+---
+
 ## Preface
 
 ### Note
