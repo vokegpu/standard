@@ -2,11 +2,9 @@
 
 ## Preface
 
+### Note
+
 All written here is strictly followed, may some older projects contains unaltered coding style but EKG must refactor soon.
-
----
-
-## Summary, Commit-Format, Version, and Library Coding Guide-Style
 
 ### Summary
 
@@ -14,7 +12,11 @@ All written here is strictly followed, may some older projects contains unaltere
 `Internal` - no user-programmer side purpose, only for the library engine.  
 `Features` - object(s), data(s) or any technology from Vokegpu.
 
-### Commit-Format
+---
+
+## Commit and Version
+
+### Commit
 
 Commit formatting is important, sadly VokeGpu is not total mature, but we should follow it now.
 
@@ -54,9 +56,25 @@ etc
 ```
 
 Most recent version must be always at end.  
-With this auto-releases are possible with complete description and history.
+With auto-release, we can describe a complete history-change and details.
 
-### Library Coding Guide-Style
+---
+
+## The Programming Standard for Building VokeGpu Technologies 
+
+### Architecture 
+
+Building a project with support for 32 bits must use at maxium 4-bytes number, as example, declaring `flags_t` or `id`:
+```cpp
+namespace * {
+  typedef uint32_t flags_t;
+  typedef uint32_t id_t;
+};
+```
+
+If the project purpose is not support 32-bits, reaching 8-bytes is not a rule, this applies for all parts of code, every field, function, method etc.
+
+### Library-Standard
 
 * Use `#ifndef LIB_PACKAGE_FEATURE_HPP` for headers, for platform-specific code use `#if defined(X)`
 ```c++
@@ -129,22 +147,26 @@ namespace lib {
 };
 ```
 
-### Software Coding Guide-Style
+### Software-Standard
 
 All must follow as core-library, except:
 
 * Executable output dir must be located in: `bin/OS/32|64`.
 
-* Use `typedef` using namespace `application::*`, as example:
+* Internal-feature(s) if are used on genernal-specific places must be by-package namespace separated, otherwise, you do not need to put everything on separated namespace.
 ```cpp
-namespace app {
-  typedef uint64_t flags_t;
+// genernal-specific internal-feature(s)
+namespace application::* {
+  /**
+   * This is genernally used on specific parts of the code, not all places.
+   **/
+  application::flags_t fetch(/* etc */);
 }
-```
 
-* Enum(s) and global function(s) can be implemented using namespace `application::*`, as example:
-```cpp
-namespace app {
+// general features(s)
+namesplace application {
+  typedef uint64_t flags_t;
+
   enum make {
     MEOW,
     MOO
@@ -154,5 +176,13 @@ namespace app {
   t meow() {
     return t {};
   }
+
+  /**
+   * This can be used in EVERYTHING!
+   **/
+  class log {
+  public:
+     /* etc */ 
+  };
 }
 ```
