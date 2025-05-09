@@ -1,8 +1,10 @@
-# Code of Conduct and Coding Style Guide for Vokegpu Projects
+# Standard
 
 ---
 
 ## Preface
+
+Here we discuss about Vokegpu standard for all types of projects.
 
 ### Note
 
