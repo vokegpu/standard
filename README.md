@@ -18,7 +18,7 @@ All written here is strictly followed, may some older projects contains unaltere
 
 ---
 
-## Commit and Version
+## Commit, Version and Use-Case
 
 ### Commit
 
@@ -64,6 +64,11 @@ With auto-release, we can describe a complete history-change and details.
 
 ---
 
+### Use-Case
+
+If the project is hosted under Vokegpu and is markdown-based only, you can use `[git]`(`[update]`, `[feature`, `[ref]`) instead `[git]`.
+But if the project is not markdown-based only, likely a software/library, you must use `[git]` for markdown edits.
+
 ## The Programming-Standard
 
 ### Architecture 
@@ -108,7 +113,7 @@ namespace lib {
 * Ptr(s) must starts with `p_*`, and counts many `***`, e.g: `int ***ppp_bla`.
 * Use `this->` and not `m_*`.
 * Definitions on header(s) are trivial but do not use too much.
-* C-style references are allowed `int *p_bla` but if possible use `int &bla`.
+* C-style references `int *p_bla` are allowed when needs but always use `int &bla`.
 * Struct(s) are not allowed to have method(s), if contains, must be declared as `class` and not `struct`.
 * Non-OO (Object Oriented) or struct without method(s) must end as type `*_t`.
 * Library output dir must be located in: `lib/OS/32|64`.
@@ -125,8 +130,8 @@ namespace lib::gpu {
   };
 
   lib::flags_t create_instance(
-    lib::gpu::create_instance_info_t *p_create_instance_info,
-    lib::gpu::instance_t *p_instance
+    lib::gpu::create_instance_info_t &create_instance_info,
+    lib::gpu::instance_t &instance
   );
 }
 ```
@@ -144,9 +149,10 @@ namespace lib {
 }
 
 namespace lib {
+   // C++-style
    lib::flags_t create_model(lib::model_t &model);
 
-   // or C++ way
+   // C-style (when really needs)
    lib::flags_t create_model(lib::model_t *p_model);
 };
 ```
