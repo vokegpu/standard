@@ -18,7 +18,7 @@ All written here is strictly followed, may some older projects contains unaltere
 
 ---
 
-## Commit, Version and Use-Case
+## Commit, Version, Use-Case and Code-Documentation
 
 ### Commit
 
@@ -68,6 +68,10 @@ With auto-release, we can describe a complete history-change and details.
 
 If the project is hosted under Vokegpu and is markdown-based only, you can use `[git]`(`[update]`, `[feature`, `[ref]`) instead `[git]`.
 But if the project is not markdown-based only, likely a software/library, you must use `[git]` for markdown edits.
+
+### Code-Documentation
+
+Not done yet.
 
 ## The Programming-Standard
 
