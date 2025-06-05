@@ -66,8 +66,6 @@ etc
 Most recent version must be always at end.  
 With auto-release, we can describe a complete history-change and details.
 
----
-
 ### Use-Case
 
 If the project is hosted under Vokegpu and is markdown-based only, you can use `[git]`(`[update]`, `[feature`, `[ref]`) instead `[git]`.
@@ -76,6 +74,8 @@ But if the project is not markdown-based only, likely a software/library, you mu
 ### Code-Documentation
 
 Not done yet.
+
+---
 
 ## The Programming-Standard
 
