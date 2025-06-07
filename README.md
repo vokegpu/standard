@@ -24,7 +24,11 @@ All written here is strictly followed, may some older projects contains unaltere
 
 ---
 
-## Commit, Version and Code-Documentation
+## Documentation, Commit and Version
+
+### Documentation
+
+Not done yet.
 
 ### Commit
 
@@ -47,10 +51,6 @@ Commit-types:
 * `[git] + [<any>]` any related git stuff, readme, GitHub ci/di pipeline etc.
 * `[deprecated]` specific-case where you deprecated anything
 * `[build]` build-file was changed
-
-### Code-Documentation
-
-Not done yet.
 
 ### Version
 
