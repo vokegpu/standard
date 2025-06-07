@@ -24,7 +24,7 @@ All written here is strictly followed, may some older projects contains unaltere
 
 ---
 
-## Commit, Version, Use-Case and Code-Documentation
+## Commit, Version and Code-Documentation
 
 ### Commit
 
@@ -47,6 +47,15 @@ Commit-types:
 * `[git]` any related git stuff
 * `[deprecated]` specific-case where you deprecated anything
 * `[build]` build-file was changed
+
+#### Use-Case
+
+If the project is hosted under Vokegpu and is markdown-based only, you can use `[git]`(`[update]`, `[feature`, `[ref]`) instead `[git]`.
+But if the project is not markdown-based only, likely a software/library, you must use `[git]` for markdown edits.
+
+### Code-Documentation
+
+Not done yet.
 
 ### Version
 
@@ -79,15 +88,6 @@ Each milestone must be a complete new version, and the master branch should be b
 `Milestone.Feature.Fix` or `Major.Minor.Patch`: a `Milestone` should be the milestone name, `Feature` can be anything new, and a `Fix` can be a hotfix, fix, patch, performance fix etc.
 
 Each new issue completed and squashed on Master, is a new release.
-
-### Use-Case
-
-If the project is hosted under Vokegpu and is markdown-based only, you can use `[git]`(`[update]`, `[feature`, `[ref]`) instead `[git]`.
-But if the project is not markdown-based only, likely a software/library, you must use `[git]` for markdown edits.
-
-### Code-Documentation
-
-Not done yet.
 
 ---
 
