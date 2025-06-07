@@ -50,7 +50,9 @@ Commit-types:
 
 ### Version
 
-Any software from VokeGpu MUST has a paper named `commit.txt` under `version` dir, where you can describe what was created, updated or deleted.
+#### Direct to a Master
+
+A software/library which does not want to receive official release until the nature is done. Should include a file named `commit.txt` under `version` dir, where you can describe what was created, updated or deleted.
 ```
 [version e.g: 1.0.0] [date e.g: 04/06/2025]
 
@@ -67,6 +69,16 @@ etc
 
 Most recent version must be always at end.  
 With auto-release, we can describe a complete history-change and details.
+
+#### Official Release
+
+For projects where official releases exists, for example a complete architectured-model library/application, the version must be separated between Milestones.
+
+Each milestone must be a complete new version, and the master branch should be buildable, each issue should upgrade a minor or a patch, and a complete milestone should upgrade a major version.
+
+`Milestone.Feature.Fix` or `Major.Minor.Patch`: a `Milestone` should be the milestone name, `Feature` can be anything new, and a `Fix` can be a hotfix, fix, patch, performance fix etc.
+
+Each new issue completed and squashed on Master, is a new release.
 
 ### Use-Case
 
