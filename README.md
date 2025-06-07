@@ -66,9 +66,7 @@ A software/library which does not want to receive official release until the nat
 [version e.g: 1.1.0] [date e.g: 10/07/2025]
 
 -- [description e.g: bla added meow]
-
 etc
-
 ```
 
 Most recent version must be always at end.  
