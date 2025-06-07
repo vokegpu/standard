@@ -44,14 +44,9 @@ Commit-types:
 * `[feature]` added a feature
 * `[fix]` fixed something like a glitch or performance-issues
 * `[ref]` refactored code, like code-format, nomenclature or any moved stuff
-* `[git]` any related git stuff
+* `[git] + [<any>]` any related git stuff, readme, GitHub ci/di pipeline etc.
 * `[deprecated]` specific-case where you deprecated anything
 * `[build]` build-file was changed
-
-#### Use-Case
-
-If the project is hosted under Vokegpu and is markdown-based only, you can use `[git]`(`[update]`, `[feature`, `[ref]`) instead `[git]`.
-But if the project is not markdown-based only, likely a software/library, you must use `[git]` for markdown edits.
 
 ### Code-Documentation
 
