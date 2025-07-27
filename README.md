@@ -40,9 +40,20 @@ User-programmer side must be documented. Internal side should be documented (rec
  **/
 ```
 
-#### Functions and Macros
+#### Format-&-Notation, Functions and Macros
 
+The notation and format:
 ```cpp
+// notation
+
+/**
+ * @brief short-text about
+ * @note extra-stuff
+ * @description verbose description
+ * @param one parameter
+ * @return type of return  
+ **/
+
 // format
 
 /**
@@ -55,7 +66,9 @@ User-programmer side must be documented. Internal side should be documented (rec
  * @*:
  *  bla-bla class `x`
  **/
+```
 
+```
 // macros
 
 /**
@@ -99,7 +112,7 @@ namespace * {
    * @note things
    * @description verbose stuff
    **/
-  class meow {// etc};
+  class meow {};
 
   /**
    * @* same as class
