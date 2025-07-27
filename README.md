@@ -40,7 +40,7 @@ User-programmer side must be documented. Internal side should be documented (rec
  **/
 ```
 
-#### Format-&-Notation, Functions and Macros
+#### Notation-&-Format, Functions and Macros
 
 The notation and format:
 ```cpp
@@ -68,7 +68,7 @@ The notation and format:
  **/
 ```
 
-```
+```cpp
 // macros
 
 /**
