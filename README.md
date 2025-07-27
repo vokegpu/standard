@@ -28,7 +28,84 @@ All written here is strictly followed, may some older projects contains unaltere
 
 ### Documentation
 
-Not done yet. Meow.
+User-programmer side must be documented. Internal side should be documented (recommended). Functions, structures, classes, methods, macros, specific-things should be documented.
+
+#### Specific Headers
+
+```cpp
+/**
+ * Specific things should be spefified like this.
+ * There is no a limit for lines, but fiting screen space should be enough.
+ **/
+```
+
+#### Functions and Macros
+
+```cpp
+// format
+
+/**
+ * @* bla-bla class `x`
+ **/
+
+// or
+
+/**
+ * @*:
+ *  bla-bla class `x`
+ **/
+
+// macros
+
+/**
+ * @param `x` bla
+ * @param `y` blu
+ * @return stuff
+ **/
+#define meow_bla(x, y) x * y; 
+
+// functions
+
+namespace * {
+  /**
+   * @brief:
+   *  what-do
+   * @note:
+   *  extra-stuff
+   **/
+  void def();
+
+  /**
+   * @brief:
+   *  what-do
+   * @note:
+   *  extra-stuff
+   * @param `meow`:
+   *  which is/do
+   * @return:
+   *  what-return
+   **/
+  * def(meow_t meow, *);
+}
+```
+
+#### Classes and Structures
+
+```cpp
+namespace * {
+  /**
+   * @brief bla
+   * @note things
+   * @description verbose stuff
+   **/
+  class meow {// etc};
+
+  /**
+   * @* same as class
+   **/
+  struct meow_t {};
+}
+```
 
 ### Commit
 
