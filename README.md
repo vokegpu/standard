@@ -34,8 +34,9 @@ User-programmer side must be documented. Internal side should be documented (rec
 
 ```cpp
 /**
- * Specific things should be spefified like this.
- * There is no a limit for lines, but fiting screen space should be enough.
+ * Specific things should be like this.
+ * Text should have a fixed space to fit verbose stuff.
+ * This applies to all docs.
  **/
 ```
 
@@ -104,6 +105,18 @@ namespace * {
    * @* same as class
    **/
   struct meow_t {};
+}
+```
+
+#### Inline Comments
+
+Writing on all lines is not recommended, can be confused with IA-generated code. Stupid-fun stuff is acceptable, but stupid-unfun comments no. Redundant stuff is not accepeted.
+
+```cpp
+// this meow should be less than 32 if not the entire statement can crash
+{
+  int32_t meow {};
+  /* etc */
 }
 ```
 
